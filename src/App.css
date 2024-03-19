@@ -15,3 +15,26 @@
 .center .swiper-slide-prev {
     border: 3px solid green;
 }
+
+.contact-btn {
+    padding: 12px 32px 12px 32px;
+    border-radius: 261px;
+    border: 0;
+    outline: 2px solid transparent;
+    transition: all .3s linear;
+    background: linear-gradient(151.6deg, #D4145A 1.85%, #FBB03B 98.12%);
+}
+
+.contact-btn:hover {
+    background: transparent;
+    outline: 2px solid white;
+}
+
+.cube .swiper,
+.card .swiper {
+    max-width: 300px;
+}
+
+.card .swiper-slide {
+    width: 300px !important;
+}

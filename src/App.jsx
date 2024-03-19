@@ -7,11 +7,15 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-cube";
+import "swiper/css/effect-cards";
 
 import {
   A11y,
   Autoplay,
   Controller,
+  EffectCards,
+  EffectCube,
   EffectFade,
   Mousewheel,
   Navigation,
@@ -234,10 +238,6 @@ function App() {
           }}
           modules={[Virtual, Navigation, Pagination, A11y, Autoplay]}
           loop={true}
-          // autoplay={{
-          //   delay: 1000,
-          //   disableOnInteraction: false,
-          // }}
           centeredSlides={true}
           spaceBetween={10}
           slidesPerView={1}
@@ -478,6 +478,137 @@ function App() {
           </SwiperSlide>
           <SwiperSlide className=" h-auto">
             <div className="p-10 bg-yellow-700 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrujdfjkhdfjshjsgfsdjgfsdfsdpti ab blanditiis,
+                quasi voluptates perspiciatis similique iure facere!
+              </p>
+              <img src={reactLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <h2 className=" text-3xl text-center font-bold text-slate-500">
+        cube effect
+      </h2>
+      <div className=" cube flex flex-grow   items-center max-w-[1440px] px-3 mx-auto w-full min-h-screen">
+        <Swiper
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
+          loop={true}
+          effect="cube"
+          modules={[
+            Virtual,
+            Navigation,
+            Pagination,
+            A11y,
+            EffectCube,
+            Mousewheel,
+          ]}
+          spaceBetween={10}
+          slidesPerView={1}
+          mousewheel={true}
+          cubeEffect={{
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          }}
+          grabCursor={true}
+          pagination={{ clickable: true }}
+        >
+          <SwiperSlide className=" !w-full !h-auto">
+            <div className="p-10 w-full bg-black h-full text-center flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrupti ab blanditiis, quasi voluptates
+                perspiciatis similique iure facere!
+              </p>
+              <img src={viteLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className=" !w-full !h-auto">
+            <div className="p-10 w-full bg-yellow-600 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum djs perspiciatis similique iure facere!
+              </p>
+              <img src={reactLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className=" !w-full !h-auto">
+            <div className="p-10 w-full bg-green-500 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrupti ab blanditiis, quasi voluptates
+                perspiciatis similique iure facere!
+              </p>
+              <img src={viteLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className=" !w-full !h-auto">
+            <div className="p-10 w-full bg-yellow-700 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrujdfjkhdfjshjsgfsdjgfsdfsdpti ab blanditiis,
+                quasi voluptates perspiciatis similique iure facere!
+              </p>
+              <img src={reactLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <h2 className=" text-3xl text-center font-bold text-slate-500">
+        card effect
+      </h2>
+      <div className=" card flex flex-grow   items-center max-w-[1440px] px-3 mx-auto w-full min-h-screen">
+        <Swiper
+          breakpoints={{
+            768: {
+              slidesPerView: 2,
+            },
+          }}
+          loop={true}
+          modules={[Virtual, Navigation, Pagination, A11y, EffectCards]}
+          effect={"cards"}
+          spaceBetween={10}
+          slidesPerView={1}
+          grabCursor={true}
+          pagination={{ clickable: true }}
+        >
+          <SwiperSlide className="  !h-auto">
+            <div className="p-10 w-full bg-black h-full text-center flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrupti ab blanditiis, quasi voluptates
+                perspiciatis similique iure facere!
+              </p>
+              <img src={viteLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="  !h-auto">
+            <div className="p-10 w-full bg-yellow-600 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Loreconsectetur adipisicing elit. Sit sapiente aut corrupti ab
+                blanditiis, quasi voluptates perspiciatis similique iure facere!
+              </p>
+              <img src={reactLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="  !h-auto">
+            <div className="p-10 w-full bg-green-500 h-full flex flex-col items-center gap-5">
+              <p className="text-white text-center">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
+                sapiente aut corrupti ab blanditiis, quasi voluptates
+                perspiciatis similique iure facere!
+              </p>
+              <img src={viteLogo} height={12} width={100} alt="vitelogo" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide className="  !h-auto">
+            <div className="p-10 w-full bg-yellow-700 h-full flex flex-col items-center gap-5">
               <p className="text-white text-center">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit
                 sapiente aut corrujdfjkhdfjshjsgfsdjgfsdfsdpti ab blanditiis,
