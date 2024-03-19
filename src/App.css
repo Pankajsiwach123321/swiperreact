@@ -1,0 +1,17 @@
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, 8px);
+    top: var(--swiper-pagination-top, auto);
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: unset !important;
+}
+
+.center .swiper-slide-active {
+    border: 3px solid red;
+}
+
+.center .swiper-slide-next,
+.center .swiper-slide-prev {
+    border: 3px solid green;
+}
